@@ -25,11 +25,13 @@ Q3. How would you validate a complex nested JSON response containing dynamic val
 Ans- dyanmic values should be validated with datatypes, patterns , startswith, notnull
     optional fields is present
     arrays: check the size of the array,  chechk property of each field data types pattern and required or not
-    multiple objects we need to see the size
+    multiple objects we need to see the size and go inside and check the each and every field
 
 Q4. How would you automate an API workflow involving OAuth 2.0 authentication, token expiration, dependent API calls, and retry handling for HTTP 429 and 5xx responses? How would you design reusable request specifications and avoid unnecessary token generation?
 
-Ans- 
+Ans- The token manager caches the access token and expiry time, reuses valid tokens, and obtains them when necessary. 
+Dependent API calls extract IDs from earlier responses and pass them into subsequent requests. 
+For HTTP 429 and transient 5xx responses,Retry-After with exponential time . For authentication failures, I reacquire the token and retry.
 
 
 Q5. Given a list of custom Employee objects, how would you remove duplicates based on employee ID while preserving insertion order, identify employees with duplicate IDs, and explain how equals() and hashCode() affect the solution? Compare using LinkedHashSet, HashMap, and Java Streams.
