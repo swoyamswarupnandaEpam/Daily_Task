@@ -5,7 +5,7 @@ Solution:
 staleElementReferenceException  occur when we try to interact with an element that is no longer valid in the current dom.
 it can  be handled by 3 ways:
 1)relocating the element
-2)by using Explicit wait
+2)by using Explicit wait 
 3)we can make use of retryanalyzer
  
 if the element can be found again we can make use "relocating the element", and if the element will appear if we wait for some specific condtion we can make use of "explicit wait ", and if a test fail because of staleElementReferenceException we can retry a failed test using "retryanalyzer " and try to interact with element again
